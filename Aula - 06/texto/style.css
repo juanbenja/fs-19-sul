@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+p {
+    font-size: 20px;
+    color: rgb(8, 8, 8);
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.segundo span {
+    color: rgb(255, 8, 8);
+    font-weight: 800;
+    font-style: normal;
+    font-family: "Anton SC", sans-serif;
+}
+
+.monalisa {
+    background-image: url("https://cdn-thumbs.ohmyprints.net/1/2e35439deeb7fbb33c5af0b2b3f0739d/817x600/thumbnail/fit.jpg");
+    width: 500px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+
