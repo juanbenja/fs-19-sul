@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio Pessoal</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="flex justify-center items-center bg-black text-white h-14 ">
+        <div class="flex w-full max-w-screen-lg justify-between">
+            <a href="#" class="">Meu Portfolio</a>
+            <div id="navbarNav">
+                <ul class="flex gap-3.5">
+                    <li>
+                        <a href="#about">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projetos</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Sobre -->
+    <section id="about">
+        <div class="flex justify-center py-12">
+            <div class="flex justify-between w-full max-w-screen-lg items-center">
+                <div class="flex flex-col gap-6">
+                    <h2 class="text-xl font-semibold">Sobre Mim</h2>
+                    <p class="text-sm">
+                        Olá! Eu sou um desenvolvedor web com paixão por criar soluções inovadoras...
+                    </p>
+                    <div>
+                        <button class="hover:bg-sky-700 bg-sky-600 px-3 py-1.5 rounded-md text-white">Linkedin</button>
+                        <button class="hover:bg-sky-700 bg-sky-600 px-3 py-1.5 rounded-md text-white">Facebook</button>
+                        <button class="hover:bg-sky-700 bg-sky-600 px-3 py-1.5 rounded-md text-white">Github</button>
+
+                    </div>
+                </div>
+                <div
+                    class="bg-[url('https://redesampaio.com/wp-content/uploads/2021/07/78dae-22-de-setembro-e28093-ronaldo-nazc3a1rio-fenc3b4meno-1976-e28093-41-anos-em-2017-acontecimentos-do-dia-foto-1.jpg')] size-80 bg-center bg-cover rounded-full flex justify-end items-end">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects" class="flex w-full justify-center py-12">
+        <div class="w-full max-w-screen-lg space-y-6">
+            <h2 class="text-4xl font-semibold text-center">Meus Projetos</h2>
+            <div>
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="w-80 border-2 border-zinc-300 col-span-1 rounded-lg overflow-hidden">
+                        <img src="https://img.odcdn.com.br/wp-content/uploads/2023/08/web-crawler-1024x576.jpg"
+                            alt="Projeto 1">
+                        <div class="py-4 px-2 space-y-2">
+                            <h5 class="text-xl font-semibold">Projeto</h5>
+                            <p>Descrição breve do projeto 1...</p>
+                        </div>
+                    </div>
+                    <div class="w-80 border-2 border-zinc-300 col-span-1 rounded-lg overflow-hidden">
+                        <img src="https://img.odcdn.com.br/wp-content/uploads/2023/08/web-crawler-1024x576.jpg"
+                            alt="Projeto 1">
+                        <div class="py-4 px-2 space-y-2">
+                            <h5 class="text-xl font-semibold">Projeto</h5>
+                            <p>Descrição breve do projeto 2...</p>
+                        </div>
+                    </div>
+                    <div class="w-80 border-2 border-zinc-300 col-span-1 rounded-lg overflow-hidden">
+                        <img src="https://img.odcdn.com.br/wp-content/uploads/2023/08/web-crawler-1024x576.jpg"
+                            alt="Projeto 1">
+                        <div class="py-4 px-2 space-y-2">
+                            <h5 class="text-xl font-semibold">Projeto</h5>
+                            <p>Descrição breve do projeto 3...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact">
+        <div class="w-full max-w-screen-lg mx-auto space-y-6 py-12">
+            <h2 class="text-4xl font-semibold text-center">Contato</h2>
+            <form class="space-y-2">
+                <div class="flex flex-col gap-2">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" required class="border-2 border-zinc-400 rounded-md h-10 px-2" placeholder="Nome completo">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" required class="border-2 border-zinc-400 rounded-md h-10 px-2" placeholder="name@flowbite.com">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" rows="4" required class="border-2 border-zinc-400 rounded-md h-48 px-2" placeholder="Insira uma mensagem"></textarea>
+                </div>
+                <button type="submit" class="hover:bg-sky-700 bg-sky-600 px-3 py-1.5 rounded-md text-white">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="flex justify-center items-center bg-black text-white h-10">
+        <p>&copy; 2024 Meu Portfolio. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
