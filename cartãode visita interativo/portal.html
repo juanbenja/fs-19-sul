@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal DEJUR - GEQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: transparent;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: #002147;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .header {
+            background-image: url('header-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .header p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content {
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #002147;
+            grid-column: span 2;
+            text-align: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin-top: 15px;
+            font-size: 24px;
+            color: #333;
+            padding: 0 20px;
+        }
+
+        .card p {
+            color: #666;
+            padding: 0 20px 20px 20px;
+            margin: 15px 0 0 0;
+        }
+
+        .card button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #002147;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card button:hover {
+            background-color: #ffd700;
+        }
+
+        .parallax {
+            background-image: url('parallax-background.jpg');
+            min-height: 300px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 36px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer {
+            background-color: #002147;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #002147;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .header h1 {
+                font-size: 80px;
+            }
+
+            .header p {
+                font-size: 24px;
+            }
+
+            .card h3 {
+                font-size: 28px;
+            }
+
+            .card p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">O DEJUR</a>
+        <a href="#conteudo">Conteúdo</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#contato">Contato</a>
+        <a href="#consultas">Consultas</a>
+    </nav>
+
+    <header class="header" id="inicio">
+        <div>
+            <h1>Bem-vindo ao Portal DEJUR</h1>
+            <p>O Departamento Jurídico do GEQ é responsável pelo acompanhamento de todas as demandas judiciais e extrajudiciais.</p>
+        </div>
+    </header>
+
+    <section class="content" id="conteudo">
+        <h2>Conteúdo e Recursos</h2>
+        <div class="card">
+            <img src="equipe.jpg" alt="Nossas Equipes">
+            <h3>Conheça as Equipes DEJUR</h3>
+            <p>Saiba mais sobre as equipes que fazem a diferença no GEQ.</p>
+            <button>Saiba Mais</button>
+        </div>
+        <div class="card">
+            <img src="consultas.jpg" alt="Consultas">
+            <h3>Consulta Requisições de Contatos</h3>
+            <p>Acesse as consultas de requisições de contatos disponíveis.</p>
+            <button>Saiba Mais</button>
+        </div>
+        <div class="card">
+            <img src="fluxos.jpg" alt="Fluxos">
+            <h3>Fluxos</h3>
+            <p>Visualize os fluxos e processos do departamento.</p>
+            <button>Saiba Mais</button>
+        </div>
+    </section>
+
+    <section class="parallax">
+        <p>Juntos, alcançamos mais.</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 GEQ. Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="back-to-top">↑ Voltar ao Topo</div>
+
+    <script>
+        // Efeito sticky na barra de navegação
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Botão voltar ao topo
+        var backToTopButton = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
